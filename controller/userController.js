@@ -33,7 +33,7 @@ export const patientRegister = catchAsyncError(async (req, res, next) => {
     dob,
     role,
   });
-  generateToken(user, "User Registered", 200, res);
+  return generateToken(user, "User Registered", 200, res);
 });
 
 export const login = catchAsyncError(async (req, res, next) => {

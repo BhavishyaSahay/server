@@ -2,7 +2,9 @@ import mongoose from "mongoose";
 import validator from "validator";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+import { config } from "dotenv";
 
+config({ path: "./config/.env" });
 const userSchema = new mongoose.Schema({
   firstName: {
     type: String,
